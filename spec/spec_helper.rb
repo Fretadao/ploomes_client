@@ -1,6 +1,21 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+
+SimpleCov.start do
+  add_filter 'spec'
+  add_filter 'vendor'
+
+  enable_coverage :branch
+end
+
+require 'bundler/setup'
+require 'webmock/rspec'
+require 'f_service/rspec'
+
 require 'ploomes_client'
+
+Dir[File.join(File.expand_path(__dir__), 'support/**/*.rb')].each { |file| require file }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
