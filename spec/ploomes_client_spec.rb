@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe PloomesClient do
-  it "has a version number" do
-    expect(PloomesClient::VERSION).not_to be nil
-  end
-
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe 'versioning' do
+    it 'has a version number' do
+      expect(PloomesClient::VERSION).not_to be_nil
+    end
   end
 end
