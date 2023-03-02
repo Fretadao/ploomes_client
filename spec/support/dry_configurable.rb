@@ -4,8 +4,8 @@
 
 require 'dry/configurable/test_interface'
 
-# PloomesClient::Configuration.enable_test_interface
-#
-# RSpec.configure do |config|
-#   config.before { PloomesClient::Configuration.reset_config }
-# end
+PloomesClient::Configuration.enable_test_interface
+
+RSpec.configure do |config|
+  config.before { PloomesClient::Configuration.reset_config }
+end
