@@ -20,7 +20,7 @@ GIT
 PATH
   remote: .
   specs:
-    ploomes_client (0.1.0)
+    ploomes_client (0.2.0)
       dry-configurable
 
 GEM
@@ -121,6 +121,7 @@ GEM
     zeitwerk (2.6.7)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
