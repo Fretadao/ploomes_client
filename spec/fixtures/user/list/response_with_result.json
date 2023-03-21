@@ -1,0 +1,41 @@
+{
+    "@odata.context": "https://public6-api2.ploomes.com/$metadata#Users",
+    "value": [
+        {
+            "Id": 10003850,
+            "Name": "Bruno Alberto",
+            "Email": "bruno.alberto@test.com.br",
+            "Phone": null,
+            "AvatarUrl": "https://stgploomescrmprd01.blob.core.windows.net/crm-prd/avatar_default.jpg",
+            "RoleId": 10022011,
+            "ProfileId": 10004345,
+            "Facebook": null,
+            "LinkedIn": null,
+            "Birthday": null,
+            "NextAnniversary": null,
+            "PreviousAnniversary": null,
+            "Integration": false,
+            "NativeIntegration": false,
+            "GoogleAuthenticatorConfigured": null,
+            "UserKey": null,
+            "LastLogin": null,
+            "Frequency": null,
+            "AccountOwner": false,
+            "ActiveSmtp": false,
+            "LastSeen": "2023-03-20T14:37:55.707-03:00",
+            "LastSeenRoute": "~/deal/500118152",
+            "Editable": true,
+            "Suspended": false,
+            "CreatorId": 10002267,
+            "UpdaterId": 10003849,
+            "CreateDate": "2021-09-30T22:16:59.017-03:00",
+            "UpdateDate": "2022-06-06T14:33:45.563-03:00",
+            "LastUpdateDate": "2022-06-06T14:33:45.563-03:00",
+            "LastSeenPlatform": "Web",
+            "ResetPassword": false,
+            "Language": "pt-BR",
+            "LanguageId": 1,
+            "NoLogin": null
+        }
+    ]
+}
