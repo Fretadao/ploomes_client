@@ -2582,7 +2582,57 @@
                     "AttachmentItemValueId": null,
                     "AttachmentItemValueName": null
                 }
-            ]
+            ],
+            "Pipeline": {
+                "Id": 10000968,
+                "Name": "Funil de vendas",
+                "FormId": 100051559,
+                "QuickFormId": 100051560,
+                "MustPassAllStages": true,
+                "ForbiddenStageReturn": true,
+                "MayCreateQuotes": true,
+                "MayCreateOrders": true,
+                "MayCreateDocuments": true,
+                "MayWinDeals": true,
+                "MayLoseDeals": true,
+                "Archived": false,
+                "NewOrderOnWonDeal": false,
+                "CreateOrderOnWonDeal": false,
+                "WinDealOnLastStage": true,
+                "SingularUnitName": "Negócio",
+                "PluralUnitName": "Negócios",
+                "GenderId": 1,
+                "DefaultQuoteDocumentTemplateId": null,
+                "DefaultOrderDocumentTemplateId": null,
+                "DefaultDocumentDocumentTemplateId": null,
+                "Color": "#1920c7",
+                "IconId": 82,
+                "EnableTableViewMode": true,
+                "EnableFunnelViewMode": true,
+                "NoAllowedPipelines": null,
+                "WinButtonId": 8,
+                "LoseButtonId": 5,
+                "WinVerbId": 1,
+                "LoseVerbId": 2,
+                "Ordination": null,
+                "ViewMode": null,
+                "LastUpdateDate": "2023-03-24T10:34:41.967-03:00",
+                "ContactPageTableId": 100170194,
+                "QuotesUseERPFormat": null,
+                "OrdersUseERPFormat": null,
+                "DocumentsUseERPFormat": null,
+                "ExecuteAutomationsAsAutomationUser": null
+            },
+            "Status": {
+                "Id": 3,
+                "Name": "Perdida"
+            },
+            "LossReason": {
+                "Id": 10005216,
+                "Name": "Sem retorno",
+                "PipelineId": 10000968,
+                "LastUpdateDate": "2021-10-01T00:37:29.68-03:00"
+            }
         }
     ]
 }
