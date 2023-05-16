@@ -19,7 +19,7 @@ RSpec.describe PloomesClient::Deal::List do
             'odata.metadata' => 'minimal'
           }
         },
-        to: "http://localhost:3000/Deals?$expand=Attachments,OtherProperties&$filter=Id%20eq%20#{id}",
+        to: "http://localhost:3000/Deals?$expand=Attachments,OtherProperties,Pipeline,Status,LossReason&$filter=Id%20eq%20#{id}",
         response_body: ploomes_response
       )
     end
@@ -33,6 +33,16 @@ RSpec.describe PloomesClient::Deal::List do
         first_contact = result.value[:value].first
 
         expect(first_contact[:Title]).to eq('Deal - Mega ABC')
+
+        expect(first_contact.dig(:Pipeline, :Id)).to eq 10_000_968
+        expect(first_contact.dig(:Pipeline, :Name)).to eq 'Funil de vendas'
+
+        expect(first_contact.dig(:Status, :Id)).to eq 3
+        expect(first_contact.dig(:Status, :Name)).to eq 'Perdida'
+
+        expect(first_contact.dig(:LossReason, :Id)).to eq 10_005_216
+        expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
+        expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
       end
     end
 
@@ -45,6 +55,16 @@ RSpec.describe PloomesClient::Deal::List do
         first_contact = result.value[:value].first
 
         expect(first_contact[:Title]).to eq('Deal - Mega ABC')
+
+        expect(first_contact.dig(:Pipeline, :Id)).to eq 10_000_968
+        expect(first_contact.dig(:Pipeline, :Name)).to eq 'Funil de vendas'
+
+        expect(first_contact.dig(:Status, :Id)).to eq 3
+        expect(first_contact.dig(:Status, :Name)).to eq 'Perdida'
+
+        expect(first_contact.dig(:LossReason, :Id)).to eq 10_005_216
+        expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
+        expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
       end
     end
   end

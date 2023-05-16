@@ -12,7 +12,7 @@ module PloomesClient
       end
 
       def path_template
-        '/Deals?$expand=Attachments,OtherProperties&$filter=Id+eq+%<id>s'
+        '/Deals?$expand=Attachments,OtherProperties,Pipeline,Status,LossReason&$filter=Id+eq+%<id>s'
       end
 
       def path_params
