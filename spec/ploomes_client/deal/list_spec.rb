@@ -32,7 +32,7 @@ RSpec.describe PloomesClient::Deal::List do
 
         first_contact = result.value[:value].first
 
-        expect(first_contact[:Title]).to eq('Deal - Mega ABC')
+        expect(first_contact[:Title]).to eq('The best deal')
 
         expect(first_contact.dig(:Pipeline, :Id)).to eq 10_000_968
         expect(first_contact.dig(:Pipeline, :Name)).to eq 'Funil de vendas'
@@ -54,7 +54,7 @@ RSpec.describe PloomesClient::Deal::List do
 
         first_contact = result.value[:value].first
 
-        expect(first_contact[:Title]).to eq('Deal - Mega ABC')
+        expect(first_contact[:Title]).to eq('The best deal')
 
         expect(first_contact.dig(:Pipeline, :Id)).to eq 10_000_968
         expect(first_contact.dig(:Pipeline, :Name)).to eq 'Funil de vendas'
