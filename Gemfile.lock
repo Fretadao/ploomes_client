@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ploomes_client (0.3.0)
+    ploomes_client (0.3.1)
       dry-configurable
       f_http_client (>= 0.2.0)
 
