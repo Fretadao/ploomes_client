@@ -6,8 +6,6 @@ source 'https://rubygems.org'
 gemspec
 
 group :development do
-  gem 'f_http_client', github: 'Fretadao/f_http_client', branch: 'master'
-  gem 'f_service', github: 'Fretadao/f_service', branch: 'master'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'

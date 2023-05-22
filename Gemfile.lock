@@ -1,27 +1,9 @@
-GIT
-  remote: https://github.com/Fretadao/f_http_client.git
-  revision: d0f8d9b9b38a891f764841d500b0ca79b43ba661
-  branch: master
-  specs:
-    f_http_client (0.1.0)
-      activesupport
-      addressable
-      dry-configurable
-      dry-initializer
-      httparty
-
-GIT
-  remote: https://github.com/Fretadao/f_service.git
-  revision: 22d3e1c8bd4aa83b14f34b1af19aa4cd22b8ad8b
-  branch: master
-  specs:
-    f_service (0.2.0)
-
 PATH
   remote: .
   specs:
     ploomes_client (0.3.0)
       dry-configurable
+      f_http_client (>= 0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -47,11 +29,19 @@ GEM
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
     dry-initializer (3.1.1)
+    f_http_client (0.2.0)
+      activesupport
+      addressable
+      dry-configurable
+      dry-initializer
+      f_service (>= 0.3.0)
+      httparty
+    f_service (0.3.0)
     hashdiff (1.0.1)
     httparty (0.21.0)
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
     method_source (1.0.0)
@@ -125,8 +115,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  f_http_client!
-  f_service!
   ploomes_client!
   pry
   pry-nav
