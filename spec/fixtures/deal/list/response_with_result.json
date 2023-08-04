@@ -2632,7 +2632,26 @@
                 "Name": "Sem retorno",
                 "PipelineId": 10000968,
                 "LastUpdateDate": "2021-10-01T00:37:29.68-03:00"
-            }
+            },
+            "Tags": [
+                {
+                    "Id": 115,
+                    "TagId": 935,
+                    "NoteId": null,
+                    "InteractionRecordId": null,
+                    "TaskId": null,
+                    "ContactId": null,
+                    "DealId": 500143686,
+                    "LeadId": null,
+                    "EmailId": null,
+                    "Tag": {
+                        "Id": 935,
+                        "Name": "Tag Name",
+                        "Color": "#000000",
+                        "EntityId": 666
+                    }
+                }
+            ]
         }
     ]
 }
