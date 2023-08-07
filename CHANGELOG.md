@@ -2,8 +2,6 @@
 
 ## [Unreleased]
 
-## [0.4.0] - 2023-08-04
-
 - Add Tags field to Deal list service
 
 ## [0.3.1] - 2023-05-22
