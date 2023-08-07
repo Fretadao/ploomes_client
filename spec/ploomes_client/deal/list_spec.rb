@@ -19,7 +19,7 @@ RSpec.describe PloomesClient::Deal::List do
             'odata.metadata' => 'minimal'
           }
         },
-        to: "http://localhost:3000/Deals?$expand=Attachments,OtherProperties,Pipeline,Status,LossReason&$filter=Id%20eq%20#{id}",
+        to: "http://localhost:3000/Deals?$expand=Attachments,OtherProperties,Pipeline,Status,LossReason,Tags($expand=Tag)&$filter=Id%20eq%20#{id}",
         response_body: ploomes_response
       )
     end
@@ -43,6 +43,10 @@ RSpec.describe PloomesClient::Deal::List do
         expect(first_contact.dig(:LossReason, :Id)).to eq 10_005_216
         expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
         expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
+
+        expect(first_contact[:Tags].first[:TagIg]).to eq 100
+        expect(first_contact[:Tags].first.dig(:Tag, :Name)).to eq 'Tag Name'
+        expect(first_contact[:Tags].first.dig(:Tag, :Color)).to eq '#000000'
       end
     end
 
@@ -65,6 +69,10 @@ RSpec.describe PloomesClient::Deal::List do
         expect(first_contact.dig(:LossReason, :Id)).to eq 10_005_216
         expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
         expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
+
+        expect(first_contact[:Tags].first[:TagIg]).to eq 100
+        expect(first_contact[:Tags].first.dig(:Tag, :Name)).to eq 'Tag name'
+        expect(first_contact[:Tags].first.dig(:Tag, :Color)).to eq '#000000'
       end
     end
   end
