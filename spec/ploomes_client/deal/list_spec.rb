@@ -44,7 +44,7 @@ RSpec.describe PloomesClient::Deal::List do
         expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
         expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
 
-        expect(first_contact[:Tags].first[:TagIg]).to eq 100
+        expect(first_contact[:Tags].first.dig(:Tag, :Id)).to eq 935
         expect(first_contact[:Tags].first.dig(:Tag, :Name)).to eq 'Tag Name'
         expect(first_contact[:Tags].first.dig(:Tag, :Color)).to eq '#000000'
       end
@@ -70,8 +70,8 @@ RSpec.describe PloomesClient::Deal::List do
         expect(first_contact.dig(:LossReason, :Name)).to eq 'Sem retorno'
         expect(first_contact.dig(:LossReason, :PipelineId)).to eq 10_000_968
 
-        expect(first_contact[:Tags].first[:TagIg]).to eq 100
-        expect(first_contact[:Tags].first.dig(:Tag, :Name)).to eq 'Tag name'
+        expect(first_contact[:Tags].first.dig(:Tag, :Id)).to eq 935
+        expect(first_contact[:Tags].first.dig(:Tag, :Name)).to eq 'Tag Name'
         expect(first_contact[:Tags].first.dig(:Tag, :Color)).to eq '#000000'
       end
     end
